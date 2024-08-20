@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Gary.Models.Store>
+
+@{
+    ViewData["Title"] = "Store Items";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var store in Model)
+        {
+            <tr>
+                <td>@store.ItemName</td>
+                <td>@store.Description</td>
+                <td>@store.ItemPrice.ToString("C")</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(store.ImageUrl))
+                    {
+                        <img src="@store.ImageUrl" alt="@store.ItemName" style="width:100px;height:auto;" />
+                    }
+                </td>
+                <td>
+                    <form asp-action="DeleteStore" method="post" style="display:inline;">
+                        <input type="hidden" name="partitionKey" value="@store.PartitionKey" />
+                        <input type="hidden" name="rowKey" value="@store.RowKey" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="AddStore" class="btn btn-primary">Add New Store Item</a>
+

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Gary.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Item ID</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td>@transaction.CustomerId</td>
+                <td>@transaction.ItemId</td>
+                <td>@transaction.TransactionDate.ToString("d")</td>
+                <td>@transaction.Location</td>
+                <td>
+                    <form asp-action="DeleteTransaction" method="post" style="display:inline;">
+                        <input type="hidden" name="partitionKey" value="@transaction.PartitionKey" />
+                        <input type="hidden" name="rowKey" value="@transaction.RowKey" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Register" class="btn btn-primary">Register New Transaction</a>

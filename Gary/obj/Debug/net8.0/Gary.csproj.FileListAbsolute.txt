@@ -1,0 +1,8 @@
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.AssemblyInfo.cs
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.RazorAssemblyInfo.cache
+C:\Users\lab_services_student\Downloads\Gary\Gary\obj\Debug\net8.0\Gary.RazorAssemblyInfo.cs

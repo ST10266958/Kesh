@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Gary.Models.FileModel>
+
+@{
+    ViewData["Title"] = "Files";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Last Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model)
+        {
+            <tr>
+                <td>@file.Name</td>
+                <td>@file.DisplaySize</td>
+                <td>@file.LastModified?.ToString("g")</td>
+            </tr>
+        }
+    </tbody>
+</table>
